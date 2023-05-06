@@ -1,5 +1,5 @@
 var textareaElement = document.getElementById("mensaje");
-var desencriptar = document.getElementById("desencriptar");
+var desencripta = document.getElementById("desencriptar");
 var encriptar  = document.getElementById("encriptador");
 
 /* Con este texto si funciona pero alparecer el textareaElement no esta recibiendo nada;
@@ -8,19 +8,19 @@ textareaElement = "Agregando texto de prueba";
 
 
 function encriptarTexto(){
-    var textoEncriptado = "";
-    var texto = textareaElement.value; // Obtener el valor del elemento de texto
+    let textoEncriptado = "";
+    let texto = textareaElement.value; // Obtener el valor del elemento de texto
     for(let i = 0; i <= texto.length; i++){
         let caracter = texto.charAt(i);
         switch(caracter){
             case "a":
-                textoEncriptado += "enter";
+                textoEncriptado += "ai";
                 break;
             case "e":
-                textoEncriptado += "imes";
+                textoEncriptado += "enter";
                 break;
             case "i":
-                textoEncriptado += "ai";
+                textoEncriptado += "imes";
                 break;
             case "o":
                 textoEncriptado += "ober";
@@ -36,4 +36,43 @@ function encriptarTexto(){
     console.log(textoEncriptado);
 }
 
-encriptar.addEventListener("click",encriptarTexto);
+encriptar.addEventListener("click",encriptarTexto,false);
+
+function desencriptarTexto(){
+    let textoDesencriptado = "";
+    let texto = textareaElement.value; // Obtener el valor del elemento de texto encriptado
+    for(let i = 0; i <= texto.length; i++){
+        let caracter = texto.charAt(i);
+        switch(caracter){
+            case "a":
+                textoDesencriptado += "a";
+                i += 1;
+                break;
+            case "e":
+                textoDesencriptado += "e";
+                i += 4;
+                break;
+            case "i":
+                textoDesencriptado += "i";
+                i += 3;
+                break;
+            case "o":
+                textoDesencriptado += "o";
+                i += 3;
+                break;
+            case "u":
+                textoDesencriptado += "u";
+                i += 3;
+                break;
+            default:
+                textoDesencriptado += caracter;
+                break;
+        }
+    }
+    console.log(textoDesencriptado);
+}
+
+desencriptar.addEventListener("click", desencriptarTexto, false);
+
+
+
