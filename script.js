@@ -8,9 +8,10 @@ textareaElement = "Agregando texto de prueba";
 
 
 function encriptarTexto(){
-    let textoEncriptado = "";
-    for(let i = 0; i <= textareaElement.length; i++){
-        let caracter = textareaElement.charAt(i);
+    var textoEncriptado = "";
+    var texto = textareaElement.value; // Obtener el valor del elemento de texto
+    for(let i = 0; i <= texto.length; i++){
+        let caracter = texto.charAt(i);
         switch(caracter){
             case "a":
                 textoEncriptado += "enter";
