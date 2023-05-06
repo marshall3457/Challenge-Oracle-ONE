@@ -1,0 +1,140 @@
+body{
+    background-color: #F3F5FC;
+}
+.input-padron{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    background-color: #F3F5FC;
+    overflow: hidden; 
+    -webkit-text-fill-color: #0A3871;    
+    height: 600px;
+    overflow: hidden; 
+    resize: none;
+    width: 900px;
+    border: none;
+    line-height: 150%;
+    left: 240px;
+    top: 168px;
+}
+
+.input-resuelto{
+    position: absolute;
+    left: 1000px;
+    resize: none;
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+
+}
+
+label{
+    position: absolute;
+    bottom: 330px;
+    left: 250px;
+}
+
+.desencriptar{
+    border-radius: 24px;
+    position: absolute;
+    width: 328px;
+    height: 67px;
+    left: 700px;
+    top: 885px;
+    background-color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.encriptar{
+    border-radius: 24px;
+    position: absolute;
+    width: 328px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+    color: #FFFFFF;
+    background-color: #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.ImagenesExclamacion{
+    position: absolute;
+    top: 850px;
+    left: 240px;
+}
+
+.textoAdvertencia{
+
+    position: absolute;
+    top: 851px;
+    left: 266px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    
+}
+
+.imagenenEncriptador{
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    top: 283px;
+
+}
+
+.textoEncriptador{
+    position: absolute;
+    width: 336px;
+    height: 122px;
+    left: 1032px;
+    top: 619px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+}
+
+.textoAdjunto{
+    position: absolute;
+    width: 336px;
+    height: 122px;
+    top: 51px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+.logo{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+
+}
+
+.resultado-texto{
+    position: absolute;
+    top: 10px;
+    left: 400px;
+}

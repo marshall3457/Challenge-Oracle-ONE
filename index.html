@@ -1,1 +1,45 @@
-Hola
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <textarea cols="70" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
+    <input type="button" id="desencriptar" class="desencriptar" value="Desencriptar">
+    <input type="button" id= "encriptador" class="encriptar" value="Encriptar">
+    
+    <div class="logo">
+        <img src="imagenes/Logo.png" alt="logo de alura">
+    </div>
+    <div class="resultado-texto">
+        <textarea id="mensaje-resuelto" class="input-resuelto" cols="70" rows="10"></textarea>
+        
+        <div class="imagenenEncriptador">
+            <img src="imagenes/Muñeco.png" alt="imagen de buscando texto">
+        </div>
+        
+        <div class="textoEncriptador">
+            Ningún mensaje fue encontrado
+            <div class="textoAdjunto">
+                Ingresa el texto que desees encriptar o desencriptar.
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="advertencia">
+        <div class="textoAdvertencia">
+            Solo letras minusculas y sin acento
+        </div>
+        
+        <img src="imagenes/bi_exclamation-circle-fill.png" alt="simbolo de exclamacion circulo" class="ImagenesExclamacion">
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
