@@ -1,7 +1,11 @@
 var textareaElement = document.getElementById("mensaje");
 var desencriptar = document.getElementById("desencriptar");
 var encriptar  = document.getElementById("encriptador");
+
+/* Con este texto si funciona pero alparecer el textareaElement no esta recibiendo nada;
 textareaElement = "Agregando texto de prueba";
+*/
+
 
 function encriptarTexto(){
     let textoEncriptado = "";
