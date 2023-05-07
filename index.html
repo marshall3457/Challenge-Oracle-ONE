@@ -11,26 +11,23 @@
     
     <textarea cols="70" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
     <input type="button" id="desencriptar" class="desencriptar" value="Desencriptar">
-    <input type="button" id= "encriptador" class="encriptar" value="Encriptar">
+    <input type="button" id="encriptador" class="encriptar" value="Encriptar">
     
     <div class="logo">
         <img src="imagenes/Logo.png" alt="logo de alura">
     </div>
-    <div class="resultado-texto">
-        <textarea id="mensaje-resuelto" class="input-resuelto" cols="70" rows="10"></textarea>
+
+    <section class="resultado-texto">
+        <div class="contenedor"></div>  
+        <textarea id="mensaje-resuelto" class="input-resuelto" cols="70" rows="10"></textarea>       
         
-        <div class="imagenenEncriptador">
-            <img src="imagenes/Muñeco.png" alt="imagen de buscando texto">
+        <div class="Muneco" id="muneco">
+            <img src="imagenes/Muñeco.png" class="imagenenEncriptador" alt="imagen de buscando texto">
+            <h1 class="textoEncriptador">Ningún mensaje fue encontrado</h1>
+            <h2 class="textoAdjunto">Ingresa el texto que desees encriptar o desencriptar.</h2>
         </div>
         
-        <div class="textoEncriptador">
-            Ningún mensaje fue encontrado
-            <div class="textoAdjunto">
-                Ingresa el texto que desees encriptar o desencriptar.
-            </div>
-        </div>
-        
-    </div>
+    </section>
     
     <div class="advertencia">
         <div class="textoAdvertencia">

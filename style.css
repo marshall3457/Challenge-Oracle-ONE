@@ -1,6 +1,7 @@
 body{
     background-color: #F3F5FC;
 }
+
 .input-padron{
     position: absolute;
     font-family: 'Inter';
@@ -20,13 +21,24 @@ body{
     top: 168px;
 }
 
-.input-resuelto{
-    position: absolute;
+.contenedor{
+    position: relative;
     left: 1000px;
+    background-color: #FFFFFF;
     resize: none;
     width: 400px;
     height: 944px;
     border-radius: 32px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-resuelto{
+    position: absolute;
+    width: 336px;
+    height: 781px;
+    left: 1032px;
+    top: 72px;
+    
 
 }
 
@@ -134,7 +146,7 @@ label{
 }
 
 .resultado-texto{
-    position: absolute;
-    top: 10px;
-    left: 400px;
+    display: inline-block;
+    
 }
+

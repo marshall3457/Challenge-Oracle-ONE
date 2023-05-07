@@ -29,14 +29,15 @@ function encriptarTexto(){
                 textoEncriptado += "ufat";
                 break;
             default:
-                textoEncriptado += caracter;
+                textoEncriptado += caracter; //aqui agrega las letras que no son vocales;
                 break;
         }
     }
     console.log(textoEncriptado);
+    document.getElementById("muneco").style.display = "none";
 }
 
-encriptar.addEventListener("click",encriptarTexto,false);
+encriptar.addEventListener("click",encriptarTexto);
 
 function desencriptarTexto(){
     let textoDesencriptado = "";
@@ -46,11 +47,12 @@ function desencriptarTexto(){
         switch(caracter){
             case "a":
                 textoDesencriptado += "a";
-                i += 1;
+                i += 1;  //saltando lo que agrego el encriptado, por ejemplo en este caso agregaba al 'a' el 'i' para encriptarlo entonces solo me salte esa iteracion del 'i' a la hora de construir del mensaje desencriptado;
                 break;
             case "e":
                 textoDesencriptado += "e";
-                i += 4;
+                i += 4; /*otro ejemplo: en este caso a la vocal 'e' se le agregaba 'nter' para encriptarlo entonces para desencriptarlo solo necesitaba saltarme esos elemento('nter') de la cadena de caracteres, para que
+                haci quedara la e sola y desencriptada para ser agregada al texto desencriptado; */
                 break;
             case "i":
                 textoDesencriptado += "i";
@@ -65,14 +67,16 @@ function desencriptarTexto(){
                 i += 3;
                 break;
             default:
-                textoDesencriptado += caracter;
+                textoDesencriptado += caracter; //aqui agrega las letras que no son vocales;
                 break;
+
         }
     }
     console.log(textoDesencriptado);
+    document.getElementById("muneco").style.display = "none";
 }
 
-desencriptar.addEventListener("click", desencriptarTexto, false);
+desencriptar.addEventListener("click", desencriptarTexto);
 
 
 
