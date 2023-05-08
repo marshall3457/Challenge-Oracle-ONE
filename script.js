@@ -1,6 +1,7 @@
 var textareaElement = document.getElementById("mensaje");
 var desencripta = document.getElementById("desencriptar");
 var encriptar  = document.getElementById("encriptador");
+var textoResuelto = document.getElementById("mensaje-resuelto");
 
 /* Con este texto si funciona pero alparecer el textareaElement no esta recibiendo nada;
 textareaElement = "Agregando texto de prueba";
@@ -33,8 +34,14 @@ function encriptarTexto(){
                 break;
         }
     }
-    console.log(textoEncriptado);
-    document.getElementById("muneco").style.display = "none";
+    textoResuelto.value = textoEncriptado;
+
+    if(textareaElement.value != ""){
+        document.getElementById("muneco").style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
+    }
+    if(textoEncriptado == ""){
+        document.getElementById("muneco").style.display = "block";
+    }
 }
 
 encriptar.addEventListener("click",encriptarTexto);
@@ -72,8 +79,14 @@ function desencriptarTexto(){
 
         }
     }
-    console.log(textoDesencriptado);
-    document.getElementById("muneco").style.display = "none";
+    textoResuelto.value = textoDesencriptado;
+    if(textareaElement.value != ""){
+        document.getElementById("muneco").style.display = "none";
+    }
+
+    if(textoDesencriptado == ""){
+        document.getElementById("muneco").style.display = "block";
+    }
 }
 
 desencriptar.addEventListener("click", desencriptarTexto);

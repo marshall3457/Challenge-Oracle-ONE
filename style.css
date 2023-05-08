@@ -19,6 +19,8 @@ body{
     line-height: 150%;
     left: 240px;
     top: 168px;
+    outline: none;
+
 }
 
 
@@ -28,8 +30,14 @@ body{
     width: 336px;
     height: 781px;
     top: 72px;
+    -webkit-text-fill-color: #0A3871;    
     resize: none;
-
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    border: none;
+    outline: none;
 }
 
 label{
@@ -100,8 +108,8 @@ label{
     height: 944px;
     border-radius: 32px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    top: 5px;
-    left: 1200px;  
+    top: 10px;
+    left: 1300px;  
     text-align: center;
 
 }
@@ -124,6 +132,7 @@ label{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
+    top: -150px;
     line-height: 120%;
     color: #343A40;
 
@@ -137,8 +146,10 @@ label{
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    top: -120px;
     color: #495057;
 }
+
 
 .logo{
     position: absolute;
