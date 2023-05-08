@@ -21,24 +21,14 @@ body{
     top: 168px;
 }
 
-.contenedor{
-    position: relative;
-    left: 1000px;
-    background-color: #FFFFFF;
-    resize: none;
-    width: 400px;
-    height: 944px;
-    border-radius: 32px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
+
 
 .input-resuelto{
-    position: absolute;
+    position: relative;
     width: 336px;
     height: 781px;
-    left: 1032px;
     top: 72px;
-    
+    resize: none;
 
 }
 
@@ -100,41 +90,53 @@ label{
     
 }
 
+
+.contenedor{
+    position: absolute;
+    display: inline-block;
+    background-color: #FFFFFF;
+    resize: none;
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    top: 5px;
+    left: 1200px;  
+    text-align: center;
+
+}
+
 .imagenenEncriptador{
     position: absolute;
+    display: inline-block;
     width: 336px;
     height: 304px;
-    left: 1032px;
-    top: 283px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
 
 .textoEncriptador{
-    position: absolute;
-    width: 336px;
-    height: 122px;
-    left: 1032px;
-    top: 619px;
+    display: inline-block;
+    position: relative;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-    text-align: center;
     color: #343A40;
+
 }
 
 .textoAdjunto{
-    position: absolute;
-    width: 336px;
-    height: 122px;
-    top: 51px;
+    position: relative;
+    display: inline-block;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    text-align: center;
     color: #495057;
 }
 
@@ -145,8 +147,6 @@ label{
 
 }
 
-.resultado-texto{
-    display: inline-block;
-    
-}
 
+
+  
