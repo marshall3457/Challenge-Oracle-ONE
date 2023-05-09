@@ -9,10 +9,8 @@ body{
     font-weight: 400;
     font-size: 32px;
     background-color: #F3F5FC;
-    overflow: hidden; 
     -webkit-text-fill-color: #0A3871;    
     height: 600px;
-    overflow: hidden; 
     resize: none;
     width: 900px;
     border: none;
@@ -20,6 +18,7 @@ body{
     left: 240px;
     top: 168px;
     outline: none;
+    overflow: auto;
 
 }
 
@@ -28,16 +27,20 @@ body{
 .input-resuelto{
     position: relative;
     width: 336px;
-    height: 781px;
-    top: 72px;
-    -webkit-text-fill-color: #0A3871;    
+    height: 770px;
+    top: 30px;
+    -webkit-text-fill-color: #495057;    
     resize: none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 150%;
     border: none;
     outline: none;
+    overflow: auto;
+
+
 }
 
 label{
@@ -60,6 +63,7 @@ label{
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+    cursor: pointer;
 }
 
 .encriptar{
@@ -77,16 +81,18 @@ label{
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+    cursor: pointer;
+
 }
 
 .ImagenesExclamacion{
     position: absolute;
     top: 850px;
     left: 240px;
+    -webkit-user-drag: none;
 }
 
 .textoAdvertencia{
-
     position: absolute;
     top: 851px;
     left: 266px;
@@ -95,6 +101,7 @@ label{
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
+    cursor: default
     
 }
 
@@ -122,6 +129,8 @@ label{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-user-drag: none;
+
 
 }
 
@@ -152,12 +161,35 @@ label{
 
 
 .logo{
+    -webkit-user-drag: none;
     position: absolute;
     left: 40px;
     top: 40px;
-
 }
 
+.boton-copiar{
+    position: relative;
+    border-radius: 24px;
+    width: 328px;
+    height: 67px;
+    color: #0A3871;
+    background-color: #FFFFFF;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    top: 80px;
+}
 
+.botones{
+    position: relative;
+    top: -19px;
+}
+
+.advertencia{
+    position: relative;
+    top: -20px;
+}
 
   

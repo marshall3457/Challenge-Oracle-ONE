@@ -2,11 +2,12 @@ var textareaElement = document.getElementById("mensaje");
 var desencripta = document.getElementById("desencriptar");
 var encriptar  = document.getElementById("encriptador");
 var textoResuelto = document.getElementById("mensaje-resuelto");
-
+var copiarTexto = document.getElementById("copiar");
 /* Con este texto si funciona pero alparecer el textareaElement no esta recibiendo nada;
 textareaElement = "Agregando texto de prueba";
 */
-
+textoResuelto.style.cursor = "default";
+copiarTexto.style.display = "none";
 
 function encriptarTexto(){
     let textoEncriptado = "";
@@ -34,13 +35,18 @@ function encriptarTexto(){
                 break;
         }
     }
+    
     textoResuelto.value = textoEncriptado;
-
+    
     if(textareaElement.value != ""){
-        document.getElementById("muneco").style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
+        muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
+        textoResuelto.style.cursor = "text";
+        copiarTexto.style.display = "inline-block";
     }
     if(textoEncriptado == ""){
-        document.getElementById("muneco").style.display = "block";
+        muneco.style.display = "block";
+        textoResuelto.style.cursor = "default";
+
     }
 }
 
@@ -79,17 +85,32 @@ function desencriptarTexto(){
 
         }
     }
+
     textoResuelto.value = textoDesencriptado;
     if(textareaElement.value != ""){
-        document.getElementById("muneco").style.display = "none";
+        muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
+        textoResuelto.style.cursor = "text";
+        copiarTexto.style.display = "inline-block";
     }
-
+    
     if(textoDesencriptado == ""){
-        document.getElementById("muneco").style.display = "block";
+        muneco.style.display = "block";
+        textoResuelto.style.cursor = "default";
+
     }
 }
 
 desencriptar.addEventListener("click", desencriptarTexto);
 
 
+function copiar(){
+    var elemento = document.createElement("textarea");
+    elemento.value = textoResuelto.value;
+    document.body.appendChild(elemento);
+    elemento.select();
+    document.execCommand("copy");
+    document.body.removeChild(elemento);
 
+}
+
+copiarTexto.addEventListener("click",copiar);

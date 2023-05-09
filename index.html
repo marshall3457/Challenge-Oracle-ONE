@@ -10,29 +10,33 @@
 <body>
     
     <textarea cols="70" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
-    <input type="button" id="desencriptar" class="desencriptar" value="Desencriptar">
-    <input type="button" id="encriptador" class="encriptar" value="Encriptar">
-    
+    <div class="botones">
+        <input type="button" id="desencriptar" class="desencriptar" value="Desencriptar">
+        <input type="button" id="encriptador" class="encriptar" value="Encriptar">
+    </div>
     <div class="logo">
         <img src="imagenes/Logo.png" alt="logo de alura">
     </div>
 
     <section class="contenedor">
-        <textarea id="mensaje-resuelto" value="" class="input-resuelto" cols="70" rows="10" readonly="false"></textarea>    
+        <div>
+            <textarea id="mensaje-resuelto" class="input-resuelto" cols="70" rows="10" readonly="false"></textarea>    
+        </div>
         <div id="muneco">
             <img src="imagenes/Muñeco.png" class="imagenenEncriptador" alt="imagen de buscando texto">
             <h2 class="textoEncriptador">Ningún mensaje fue encontrado</h2>
             <h3 class="textoAdjunto">Ingresa el texto que desees encriptar o desencriptar.</h3>
         </div>
+        <input type="button" id="copiar" class="boton-copiar" value="copiar">
     </section>
     
-    <div class="advertencia">
+    <section class="advertencia">
         <div class="textoAdvertencia">
             Solo letras minusculas y sin acento
         </div>
         
         <img src="imagenes/bi_exclamation-circle-fill.png" alt="simbolo de exclamacion circulo" class="ImagenesExclamacion">
-    </div>
+    </section>
     
 </body>
 <script src="script.js"></script>
