@@ -37,15 +37,19 @@ function encriptarTexto(){
     }
     
     textoResuelto.value = textoEncriptado;
-    
+    copiarTexto.style.backgroundColor = "#FFFFFF";
+    copiarTexto.value = "copiar";
+
     if(textareaElement.value != ""){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
         textoResuelto.style.cursor = "text";
         copiarTexto.style.display = "inline-block";
+
     }
     if(textoEncriptado == ""){
         muneco.style.display = "block";
         textoResuelto.style.cursor = "default";
+        copiarTexto.style.display = "none";
 
     }
 }
@@ -87,15 +91,20 @@ function desencriptarTexto(){
     }
 
     textoResuelto.value = textoDesencriptado;
+    copiarTexto.style.backgroundColor = "#FFFFFF";
+    copiarTexto.value = "copiar";
+
     if(textareaElement.value != ""){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
         textoResuelto.style.cursor = "text";
         copiarTexto.style.display = "inline-block";
+
     }
     
     if(textoDesencriptado == ""){
         muneco.style.display = "block";
         textoResuelto.style.cursor = "default";
+        copiarTexto.style.display = "none";
 
     }
 }
@@ -104,6 +113,9 @@ desencriptar.addEventListener("click", desencriptarTexto);
 
 
 function copiar(){
+    copiarTexto.style.backgroundColor = "#00FF00";
+    copiarTexto.value = "copiado!";
+    copiarTexto.style.fontWeight = "bold";
     var elemento = document.createElement("textarea");
     elemento.value = textoResuelto.value;
     document.body.appendChild(elemento);

@@ -25,6 +25,7 @@ body{
 
 
 .input-resuelto{
+    display: inline-block;
     position: relative;
     width: 336px;
     height: 770px;
@@ -173,7 +174,6 @@ label{
     width: 328px;
     height: 67px;
     color: #0A3871;
-    background-color: #FFFFFF;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
@@ -182,14 +182,7 @@ label{
     top: 80px;
 }
 
-.botones{
-    position: relative;
-    top: -19px;
-}
 
-.advertencia{
-    position: relative;
-    top: -20px;
-}
+
 
   
