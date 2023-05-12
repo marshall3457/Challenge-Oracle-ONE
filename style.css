@@ -22,26 +22,7 @@ body{
 
 }
 
-.input-resuelto{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    resize: none;
-    border: none;
-    outline: none;
-    overflow: auto;
-}
 
-.textoPrincipal{
-    display: block;
-    position: relative;
-    font-family: 'Inter';
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
-    
-}
 
 
 .boton-encriptar{
@@ -106,15 +87,33 @@ body{
     padding: 32px;
     border-radius: 32px;
     align-items: center;
+    border: red solid;
+    
+}
+
+.input-resuelto {
+    display: block;
+    resize: none;
+    border: none;
+    outline: none;
+    overflow: auto;
+    border: aqua solid;
+    position: absolute;
+    height: calc(100% - 64px); 
+    width: calc(100% - 64px); 
+
 
 }
 
-.imagenenEncriptador{
-    position: relative;
+.textoPrincipal{
     display: block;
-    -webkit-user-drag: none;
-
-
+    position: relative;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 200%;
+    text-align: center;
+    
 }
 
 .textoAdjunto{
@@ -124,9 +123,16 @@ body{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
     color: #495057;
     text-align: center;
+
+}
+
+.imagenenEncriptador{
+    position: relative;
+    display: block;
+    -webkit-user-drag: none;
+
 
 }
 
