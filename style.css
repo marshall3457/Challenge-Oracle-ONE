@@ -4,6 +4,8 @@ body{
 
 .input-padron{
     display: block;
+    padding-top: 70px;
+    margin-right: 70px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -20,47 +22,34 @@ body{
 
 }
 
-
-
 .input-resuelto{
     display: block;
-    position: relative;
+    position: absolute;
     width: 100%;
+    height: 500px;
     resize: none;
-    font-family: 'Inter';
-    font-weight: 400;
-    font-size: 24px;
     border: none;
     outline: none;
     overflow: auto;
+}
+
+.textoPrincipal{
+    display: block;
+    position: relative;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
     text-align: center;
     
 }
-
-
 
 
 .boton-encriptar{
     
     color: #FFFFFF;
     background-color: #0A3871;
-    
-    
-}
-
-.boton-desencriptar{
-    background-color: #FFFFFF;
-    
-}
-
-
-.ImagenesExclamacion{
-    display: block;
-    -webkit-user-drag: none;
-}
-
-.boton-desencriptar,.boton-encriptar,.boton-copiar{
-    display: inline-block;
+    position: relative;
+    width: 40%;
     border-radius: 24px;
     padding: 24px;
     font-family: 'Inter';
@@ -70,7 +59,31 @@ body{
     line-height: 19px;
     cursor: pointer;
     text-align: center;
+    margin: 24px 15px 24px 0;
 }
+
+.boton-desencriptar{
+    background-color: #FFFFFF;
+    position: relative;
+    width: 40%; /* Principalmente esto se usa para que se adapte al elemento padre y se pueda correr junto al elemento padre */
+    border-radius: 24px;
+    padding: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    text-align: center;
+    margin: 24px auto;
+}
+
+
+.ImagenesExclamacion{
+    display: block;
+    -webkit-user-drag: none;
+}
+
 
 .textoAdvertencia{
     font-family: 'Inter';
@@ -90,7 +103,6 @@ body{
     position: relative;
     display: flex;
     background-color: #FFFFFF;
-    resize: none;
     padding: 32px;
     border-radius: 32px;
     align-items: center;
@@ -99,14 +111,13 @@ body{
 
 .imagenenEncriptador{
     position: relative;
-    display: inline-block;
+    display: block;
     -webkit-user-drag: none;
 
 
 }
 
 .textoAdjunto{
-    width: 100%;
     display: block;
     position: relative;
     font-family: 'Inter';
@@ -128,9 +139,24 @@ body{
 
 .boton-copiar{
     color: #0A3871;
-
+    display: inline-block;
+    width: 100%;
+    border-radius: 24px;
+    padding: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .contenedor-usuario{
     display: flex;
+    padding: 0% 5% 0 15%;
+}
+
+.contenedor-principal{
+    display: block;
 }

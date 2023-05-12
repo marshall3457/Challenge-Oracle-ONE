@@ -14,10 +14,10 @@
         </div>
     </header>
 
-    <main>
+    <main class="contenedor-principal">
         <section class="contenedor-usuario">
             <section>
-                <textarea cols="30" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
+                <textarea cols="50" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
                 
                 <section class="advertencia">
                     <img src="imagenes/bi_exclamation-circle-fill.png" alt="simbolo de exclamacion circulo" class="ImagenesExclamacion">
@@ -33,10 +33,11 @@
             
             <section class="contenedor">
                 
+                <textarea id="mensaje-resuelto" class="input-resuelto" readonly>hola</textarea>    
                 <div id="muneco">
                     <img src="imagenes/Muñeco.png" class="imagenenEncriptador" alt="imagen de buscando texto">
-                    <textarea id="mensaje-resuelto" class="input-resuelto" readonly>Ningún mensaje fue encontrado</textarea>    
-                    <p class="textoAdjunto">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <span class="textoPrincipal">Ningún mensaje fue encontrado</span>
+                    <span class="textoAdjunto">Ingresa el texto que desees encriptar o desencriptar.</span>
                 </div>
                 
                 <input type="button" id="copiar" class="boton-copiar" value="copiar">
