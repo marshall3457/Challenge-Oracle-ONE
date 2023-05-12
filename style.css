@@ -5,7 +5,7 @@ body{
 .input-padron{
     display: block;
     padding-top: 70px;
-    margin-right: 70px;
+    margin-right: 140px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -82,13 +82,13 @@ body{
 
 .contenedor{
     position: relative;
+    flex: 1;
     display: flex;
     background-color: #FFFFFF;
     padding: 32px;
     border-radius: 32px;
-    align-items: center;
-    border: red solid;
-    
+    align-items: center; /* Alparecer esta propiedad solo aplica a los que tiene como display flex o inline-flex */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .input-resuelto {
@@ -97,12 +97,14 @@ body{
     border: none;
     outline: none;
     overflow: auto;
-    border: aqua solid;
-    position: absolute;
-    height: calc(100% - 64px); 
-    width: calc(100% - 64px); 
-
-
+    position: relative;
+    height: 80%;
+    width: 100%;
+    align-self: start;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
 }
 
 .textoPrincipal{
@@ -145,8 +147,9 @@ body{
 
 .boton-copiar{
     color: #0A3871;
-    display: inline-block;
-    width: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    width: 60%; /* Principalmente esto se usa para que se adapte al elemento padre y se pueda correr junto al elemento padre */
     border-radius: 24px;
     padding: 24px;
     font-family: 'Inter';
@@ -156,11 +159,12 @@ body{
     line-height: 19px;
     cursor: pointer;
     text-align: center;
+    margin: 24px auto;
 }
 
 .contenedor-usuario{
     display: flex;
-    padding: 0% 5% 0 15%;
+    padding: 0% 15% 0 15%;
 }
 
 .contenedor-principal{

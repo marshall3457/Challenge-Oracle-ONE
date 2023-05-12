@@ -3,11 +3,13 @@ var desencripta = document.getElementById("desencriptar");
 var encriptar  = document.getElementById("encriptador");
 var textoResuelto = document.getElementById("mensaje-resuelto");
 var copiarTexto = document.getElementById("copiar");
+var contenedor = document.getElementById("contenedor-resultado");
 /* Con este texto si funciona pero alparecer el textareaElement no esta recibiendo nada;
 textareaElement = "Agregando texto de prueba";
 */
 textoResuelto.style.cursor = "default";
 copiarTexto.style.display = "none";
+textoResuelto.style.display = "none";
 
 function encriptarTexto(){
     let textoEncriptado = "";
@@ -43,13 +45,15 @@ function encriptarTexto(){
     if(textareaElement.value != ""){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
         textoResuelto.style.cursor = "text";
-        copiarTexto.style.display = "inline-block";
-
+        copiarTexto.style.display = "block";
+        textoResuelto.style.display = "block";
+        contenedor.style.display = "block";
     }
     if(textoEncriptado == ""){
         muneco.style.display = "block";
         textoResuelto.style.cursor = "default";
         copiarTexto.style.display = "none";
+        textoResuelto.style.display = "none";
 
     }
 }
@@ -97,7 +101,9 @@ function desencriptarTexto(){
     if(textareaElement.value != ""){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
         textoResuelto.style.cursor = "text";
-        copiarTexto.style.display = "inline-block";
+        copiarTexto.style.display = "block";
+        textoResuelto.style.display = "block";
+        contenedor.style.display = "block";
 
     }
     
@@ -105,7 +111,7 @@ function desencriptarTexto(){
         muneco.style.display = "block";
         textoResuelto.style.cursor = "default";
         copiarTexto.style.display = "none";
-
+        textoResuelto.style.display = "none";
     }
 }
 
