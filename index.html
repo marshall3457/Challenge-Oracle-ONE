@@ -8,36 +8,42 @@
 </head>
 
 <body>
-    
-    <textarea cols="70" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
-    <div class="botones">
-        <input type="button" id="desencriptar" class="desencriptar" value="Desencriptar">
-        <input type="button" id="encriptador" class="encriptar" value="Encriptar">
-    </div>
-    <div class="logo">
-        <img src="imagenes/Logo.png" alt="logo de alura">
-    </div>
+    <header>
+        <div class="logo">
+            <img src="imagenes/Logo.png" alt="logo de alura">
+        </div>
+    </header>
 
-    <section class="contenedor">
-        <div>
-            <textarea id="mensaje-resuelto" class="input-resuelto" cols="70" rows="10" readonly="false"></textarea>    
-        </div>
-        <div id="muneco">
-            <img src="imagenes/Muñeco.png" class="imagenenEncriptador" alt="imagen de buscando texto">
-            <h2 class="textoEncriptador">Ningún mensaje fue encontrado</h2>
-            <h3 class="textoAdjunto">Ingresa el texto que desees encriptar o desencriptar.</h3>
-        </div>
-        <input type="button" id="copiar" class="boton-copiar" value="copiar">
-    </section>
-    
-    <section class="advertencia">
-        <div class="textoAdvertencia">
-            Solo letras minusculas y sin acento
-        </div>
-        
-        <img src="imagenes/bi_exclamation-circle-fill.png" alt="simbolo de exclamacion circulo" class="ImagenesExclamacion">
-    </section>
-    
+    <main>
+        <section class="contenedor-usuario">
+            <section>
+                <textarea cols="30" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
+                
+                <section class="advertencia">
+                    <img src="imagenes/bi_exclamation-circle-fill.png" alt="simbolo de exclamacion circulo" class="ImagenesExclamacion">
+                    
+                    <div class="textoAdvertencia">
+                        Solo letras minusculas y sin acento
+                    </div>   
+                </section>
+
+                <input type="button" id="encriptador" class="boton-encriptar" value="Encriptar">
+                <input type="button" id="desencriptar" class="boton-desencriptar" value="Desencriptar">
+            </section>
+            
+            <section class="contenedor">
+                
+                <div id="muneco">
+                    <img src="imagenes/Muñeco.png" class="imagenenEncriptador" alt="imagen de buscando texto">
+                    <textarea id="mensaje-resuelto" class="input-resuelto" readonly>Ningún mensaje fue encontrado</textarea>    
+                    <p class="textoAdjunto">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                
+                <input type="button" id="copiar" class="boton-copiar" value="copiar">
+            </section>
+
+        </section>
+    </main>
 </body>
 <script src="script.js"></script>
 </html>
