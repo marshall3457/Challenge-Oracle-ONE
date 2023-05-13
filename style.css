@@ -2,21 +2,32 @@ body{
     background-color: #F3F5FC;
 }
 
+.img-logo{
+    display: block;
+    width: 100%;   
+    object-position: left;
+    max-height: 100%;
+    object-fit: scale-down;
+}
+
+.logo{
+    height: 100px;
+}
+
 .input-padron{
+    /* tengo que tener cuidado con el widht: 100% porque este me limita algunas acciones, como en este caso que
+    fue el margin-right, pero esto igualmente le quita la opcion de que se adapte a la pagina */
     display: block;
     padding-top: 70px;
-    margin-right: 140px;
+    width: 85%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    width: 100%;
     font-size: 32px;
     background-color: #F3F5FC;
     resize: none;
     border: none;
     line-height: 150%;
-    left: 240px;
-    top: 168px;
     outline: none;
     overflow: auto;
 
@@ -81,14 +92,18 @@ body{
 }
 
 .contenedor{
+    /* Es interesane porque cuando le agrege el flex al .opciones-usuario este ya no necesita del flex y gap y just-content: center y el flex-direction: column */
     position: relative;
-    flex: 1;
     display: flex;
-    background-color: #FFFFFF;
+    flex-direction: column;
     padding: 32px;
+    background-color: #FFFFFF;
     border-radius: 32px;
     align-items: center; /* Alparecer esta propiedad solo aplica a los que tiene como display flex o inline-flex */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    justify-content: center;
+    gap: 10px;
 }
 
 .input-resuelto {
@@ -107,49 +122,13 @@ body{
     line-height: 150%;
 }
 
-.textoPrincipal{
-    display: block;
-    position: relative;
-    font-family: 'Inter';
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 200%;
-    text-align: center;
-    
+.texto-resuelto{
+    height: 100%;
 }
-
-.textoAdjunto{
-    display: block;
-    position: relative;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    color: #495057;
-    text-align: center;
-
-}
-
-.imagenenEncriptador{
-    position: relative;
-    display: block;
-    -webkit-user-drag: none;
-
-
-}
-
-
-.logo{
-    display: block;
-    -webkit-user-drag: none;
-    height: 100px;    
-}
-
 .boton-copiar{
     color: #0A3871;
     background-color: #FFFFFF;
     position: relative;
-    width: 60%; /* Principalmente esto se usa para que se adapte al elemento padre y se pueda correr junto al elemento padre */
     border-radius: 24px;
     padding: 24px;
     font-family: 'Inter';
@@ -159,14 +138,58 @@ body{
     line-height: 19px;
     cursor: pointer;
     text-align: center;
-    margin: 24px auto;
+    margin: 16px auto;
+    width: 80%;
 }
+
+.textoPrincipal{
+    display: block;
+    position: relative;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 24px;
+    width: 100%;
+    line-height: 200%;
+    text-align: center;
+    
+}
+
+.textoAdjunto{
+    display: block;
+    width: 100%;
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #495057;
+    text-align: center;
+    
+}
+
+.imagenenEncriptador{
+    width: 100%;
+    position: relative;
+    display: block;
+    -webkit-user-drag: none;
+
+
+}
+
+
 
 .contenedor-usuario{
     display: flex;
-    padding: 0% 15% 0 15%;
+    padding: 0% 5% 0 15%;
+    height: 800px;
 }
 
 .contenedor-principal{
     display: block;
+
+}
+
+.opciones-usuario{
+    flex: 3; /* Lo que creo que hace es que respecto a su elemento padre que es flex este lo acomoda con la tercera parte 
+    o de otra forma dicha este entre mas aumente el valor mas ocupa este contenedor respecto a su elemento padre que es flex */
 }

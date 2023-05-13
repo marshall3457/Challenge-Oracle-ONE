@@ -1,14 +1,14 @@
 var textareaElement = document.getElementById("mensaje");
 var desencripta = document.getElementById("desencriptar");
 var encriptar  = document.getElementById("encriptador");
-var textoResuelto = document.getElementById("mensaje-resuelto");
+var textoResuelto = document.getElementById("texto-resuelto");
+var textoEncriptDesencript= document.getElementById("mensaje-resuelto");
 var copiarTexto = document.getElementById("copiar");
 var contenedor = document.getElementById("contenedor-resultado");
 /* Con este texto si funciona pero alparecer el textareaElement no esta recibiendo nada;
 textareaElement = "Agregando texto de prueba";
 */
 textoResuelto.style.cursor = "default";
-copiarTexto.style.display = "none";
 textoResuelto.style.display = "none";
 
 function encriptarTexto(){
@@ -38,7 +38,7 @@ function encriptarTexto(){
         }
     }
     
-    textoResuelto.value = textoEncriptado;
+    textoEncriptDesencript.value = textoEncriptado;
     copiarTexto.style.backgroundColor = "#FFFFFF";
     copiarTexto.value = "copiar";
 
@@ -47,14 +47,18 @@ function encriptarTexto(){
         textoResuelto.style.cursor = "text";
         copiarTexto.style.display = "block";
         textoResuelto.style.display = "block";
-        contenedor.style.display = "block";
+        contenedor.style.alignItems = "normal"; //Esto no tiene mucha logica
+        contenedor.style.justifyContent = "normal";
+        
     }
     if(textoEncriptado == ""){
         muneco.style.display = "block";
         textoResuelto.style.cursor = "default";
         copiarTexto.style.display = "none";
         textoResuelto.style.display = "none";
-
+        contenedor.style.alignItems = "center";
+        contenedor.style.justifyContent = "center";
+        
     }
 }
 
@@ -94,24 +98,26 @@ function desencriptarTexto(){
         }
     }
 
-    textoResuelto.value = textoDesencriptado;
+    textoEncriptDesencript.value = textoDesencriptado;
     copiarTexto.style.backgroundColor = "#FFFFFF";
     copiarTexto.value = "copiar";
 
     if(textareaElement.value != ""){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
         textoResuelto.style.cursor = "text";
-        copiarTexto.style.display = "block";
         textoResuelto.style.display = "block";
-        contenedor.style.display = "block";
-
+        contenedor.style.alignItems = "normal";
+        contenedor.style.justifyContent = "normal";
+        
     }
     
     if(textoDesencriptado == ""){
         muneco.style.display = "block";
         textoResuelto.style.cursor = "default";
-        copiarTexto.style.display = "none";
         textoResuelto.style.display = "none";
+        contenedor.style.alignItems = "center";
+        contenedor.style.justifyContent = "center";
+
     }
 }
 

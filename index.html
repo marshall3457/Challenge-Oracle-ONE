@@ -10,13 +10,13 @@
 <body>
     <header>
         <div class="logo">
-            <img src="imagenes/Logo.png" alt="logo de alura">
+            <img src="imagenes/Logo.png" class="img-logo" alt="logo de alura">
         </div>
     </header>
 
     <main class="contenedor-principal">
         <section class="contenedor-usuario">
-            <section>
+            <section class="opciones-usuario">
                 <textarea cols="50" rows="10" id="mensaje" class="input-padron" placeholder="ingrese el texto aqui"></textarea>
                 
                 <section class="advertencia">
@@ -32,17 +32,18 @@
             </section>
             
             <section class="contenedor" id="contenedor-resultado">
-                
-                
-                <textarea id="mensaje-resuelto" class="input-resuelto" readonly></textarea>    
-                <input type="button" id="copiar" class="boton-copiar" value="copiar">
-                
+                <!-- Alparecer con el display en flex crea un contenedor para cada hijo entonces para corregir
+                esto hay que agrupar todos los hijos en comun para que se muestren en un solo bloque -->
+                <div id = "texto-resuelto" class="texto-resuelto">
+                    <textarea id="mensaje-resuelto" class="input-resuelto" readonly></textarea>    
+                    <input type="button" id="copiar" class="boton-copiar" value="copiar">
+                </div>
                 <div id="muneco">
                     <img src="imagenes/Muñeco.png" class="imagenenEncriptador" alt="imagen de buscando texto">
                     <span class="textoPrincipal">Ningún mensaje fue encontrado</span>
                     <span class="textoAdjunto">Ingresa el texto que desees encriptar o desencriptar.</span>
                 </div>
-                
+ 
             </section>
 
         </section>
