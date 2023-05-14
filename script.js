@@ -44,8 +44,7 @@ function encriptarTexto(){
 
     if(textareaElement.value != ""){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
-        textoResuelto.style.cursor = "text";
-        copiarTexto.style.display = "block";
+        textoEncriptDesencript.style.cursor = "text";
         textoResuelto.style.display = "block";
         contenedor.style.alignItems = "normal"; //Esto no tiene mucha logica
         contenedor.style.justifyContent = "normal";
@@ -53,8 +52,7 @@ function encriptarTexto(){
     }
     if(textoEncriptado == ""){
         muneco.style.display = "block";
-        textoResuelto.style.cursor = "default";
-        copiarTexto.style.display = "none";
+        textoEncriptDesencript.style.cursor = "default";
         textoResuelto.style.display = "none";
         contenedor.style.alignItems = "center";
         contenedor.style.justifyContent = "center";
@@ -104,7 +102,7 @@ function desencriptarTexto(){
 
     if(textareaElement.value != ""){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
-        textoResuelto.style.cursor = "text";
+        textoEncriptDesencript.style.cursor = "text";
         textoResuelto.style.display = "block";
         contenedor.style.alignItems = "normal";
         contenedor.style.justifyContent = "normal";
@@ -113,7 +111,7 @@ function desencriptarTexto(){
     
     if(textoDesencriptado == ""){
         muneco.style.display = "block";
-        textoResuelto.style.cursor = "default";
+        textoEncriptDesencript.style.cursor = "default";
         textoResuelto.style.display = "none";
         contenedor.style.alignItems = "center";
         contenedor.style.justifyContent = "center";
@@ -129,7 +127,7 @@ function copiar(){
     copiarTexto.value = "copiado!";
     copiarTexto.style.fontWeight = "bold";
     var elemento = document.createElement("textarea");
-    elemento.value = textoResuelto.value;
+    elemento.value = textoEncriptDesencript.value;
     document.body.appendChild(elemento);
     elemento.select();
     document.execCommand("copy");

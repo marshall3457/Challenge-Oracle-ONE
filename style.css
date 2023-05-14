@@ -8,10 +8,12 @@ body{
     object-position: left;
     max-height: 100%;
     object-fit: scale-down;
+    -webkit-user-drag: none;
 }
 
 .logo{
     height: 100px;
+
 }
 
 .input-padron{
@@ -126,6 +128,7 @@ body{
     height: 100%;
 }
 .boton-copiar{
+    display: block;
     color: #0A3871;
     background-color: #FFFFFF;
     position: relative;
