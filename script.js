@@ -46,7 +46,7 @@ function encriptarTexto(){
         muneco.style.display = "none"; //tambien deberia poner esto en un if para que evalue si le estamos pasando algo
         textoEncriptDesencript.style.cursor = "text";
         textoResuelto.style.display = "block";
-        contenedor.style.alignItems = "normal"; //Esto no tiene mucha logica
+        contenedor.style.alignItems = "normal";
         contenedor.style.justifyContent = "normal";
         
     }

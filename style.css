@@ -196,3 +196,42 @@ body{
     flex: 3; /* Lo que creo que hace es que respecto a su elemento padre que es flex este lo acomoda con la tercera parte 
     o de otra forma dicha este entre mas aumente el valor mas ocupa este contenedor respecto a su elemento padre que es flex */
 }
+
+@media (max-width: 768px){
+    .contenedor-usuario{
+        display: block;
+        height: 100%;
+        padding: 5% 10%;
+    }
+
+    .imagenenEncriptador{
+        display: none;
+    }
+
+    .boton-encriptar{
+
+        width: 48%;
+    }
+    .boton-desencriptar{
+        
+        width: 48%;
+    }
+
+    .contenedor{
+        display: block;
+        height: 100%;
+    }
+    
+    .input-resuelto{
+        height: 140px;
+    }
+
+    .input-padron{
+        width: 100%;
+    }
+    .boton-copiar{
+
+        margin: 0 auto;
+    }
+
+}
