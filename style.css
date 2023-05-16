@@ -197,7 +197,7 @@ body{
     o de otra forma dicha este entre mas aumente el valor mas ocupa este contenedor respecto a su elemento padre que es flex */
 }
 
-@media (max-width: 768px){
+@media (min-width: 768px){
     .contenedor-usuario{
         display: block;
         height: 100%;
