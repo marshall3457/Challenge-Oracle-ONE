@@ -11,9 +11,25 @@ textareaElement = "Agregando texto de prueba";
 textoResuelto.style.cursor = "default";
 textoResuelto.style.display = "none";
 
+function validarOracion(oracion) {
+    var regex = /^[a-z\s]*$/;
+    return regex.test(oracion);
+}
+  
+  
 function encriptarTexto(){
     let textoEncriptado = "";
     let texto = textareaElement.value; // Obtener el valor del elemento de texto
+
+    for(let i = 0; i<= texto.length; i++){
+        let caracter = texto.charAt(i);
+        if (!(validarOracion(texto))) {
+            alert("No se admiten mayúsculas ni acentos en las letras");
+            return 0;
+        }
+
+    }
+
     for(let i = 0; i <= texto.length; i++){
         let caracter = texto.charAt(i);
         switch(caracter){
@@ -65,6 +81,16 @@ encriptar.addEventListener("click",encriptarTexto);
 function desencriptarTexto(){
     let textoDesencriptado = "";
     let texto = textareaElement.value; // Obtener el valor del elemento de texto encriptado
+    
+    for(let i = 0; i<= texto.length; i++){
+        let caracter = texto.charAt(i);
+        if (!(validarOracion(texto))) {
+            alert("No se admiten mayúsculas ni acentos en las letras");
+            return 0;
+        }
+
+    }
+
     for(let i = 0; i <= texto.length; i++){
         let caracter = texto.charAt(i);
         switch(caracter){
